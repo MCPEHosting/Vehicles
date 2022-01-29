@@ -28,7 +28,7 @@ class Vehicle extends VehicleBase
 	private $driver = null;
 
 	/** @var Player[] */
-	public $passengers = [];
+	private $passengers = [];
 
 	/**
 	 * Vehicles constructor.
