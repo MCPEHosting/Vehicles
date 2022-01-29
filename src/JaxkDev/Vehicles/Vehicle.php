@@ -28,7 +28,7 @@ class Vehicle extends VehicleBase
 	private $driver = null;
 
 	/** @var Player[] */
-	private $passengers = [];
+	public $passengers = [];
 
 	/**
 	 * Vehicles constructor.
@@ -128,7 +128,7 @@ class Vehicle extends VehicleBase
 	/**
 	 * @return Player[]
 	 */
-	public function getPassengers(){
+	public function getPassengers(): array{
 		return $this->passengers;
 	}
 

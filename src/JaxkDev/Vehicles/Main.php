@@ -15,6 +15,7 @@ declare(strict_types=1);
 namespace JaxkDev\Vehicles;
 
 use pocketmine\command\Command;
+use pocketmine\network\mcpe\protocol\ProtocolInfo;
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\CommandSender;
 use pocketmine\utils\TextFormat as C;
