@@ -2,7 +2,6 @@ name: Vehicles
 author: JaxkDev
 version: 1.0.0
 api: 4.0.0
-src-namespace-prefix: JaxkDev\Vehicles
 main: JaxkDev\Vehicles\Main
 website: "https://github.com/JaxkDev/Vehicles"
 description: "PocketMine-MP plugin that brings vehicles to your server !"
