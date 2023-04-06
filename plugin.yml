@@ -1,6 +1,6 @@
 name: Vehicles
 author: JaxkDev
-version: 1.0.0
+version: 1.0.1
 api: 4.0.0
 main: JaxkDev\Vehicles\Main
 website: "https://github.com/JaxkDev/Vehicles"
