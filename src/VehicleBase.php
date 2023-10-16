@@ -52,7 +52,8 @@ class VehicleBase extends Entity
 	protected $uuid = null;
 
 	/** @var float */
-	public $gravity = 1.0;
+	public float $gravity = 1.0;
+    protected float $drag = 0.0;
 
 	/** @var float */
 	public $width = 1.0;
@@ -78,7 +79,7 @@ class VehicleBase extends Entity
 	private $type = 9;
 
 	/** @var float */
-	protected $scale = 1.0;
+	protected float $scale = 1.0;
 
 	/** @var string|null */
 	private $designName = null;
@@ -312,7 +313,7 @@ class VehicleBase extends Entity
 
 		$player->getNetworkSession()->sendDataPacket($pk);
 
-		//Dont want to keep a fake person there...
+		//Don't want to keep a fake person there...
 		$pk = new PlayerListPacket();
 		$pk->type = $pk::TYPE_REMOVE;
 		$pk->entries = [PlayerListEntry::createRemovalEntry($this->uuid)];
@@ -334,4 +335,14 @@ class VehicleBase extends Entity
 	{
 		return EntityIds::PLAYER;
 	}
+
+    protected function getInitialDragMultiplier(): float
+    {
+        return $this->drag;
+    }
+
+    protected function getInitialGravity(): float
+    {
+        return $this->gravity;
+    }
 }
